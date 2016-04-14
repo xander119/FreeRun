@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dip"
+        android:layout_weight="0.32" />
+
+    <LinearLayout
+        android:id="@+id/musicContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:contentDescription="@string/stop_run_button"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:src="@drawable/ic_previoussong" />
+
+        <TextView
+            android:id="@+id/songName"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="You Have no music playing at the time."
+            android:textSize="26sp" />
+
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:contentDescription="@string/stop_run_button"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:src="@drawable/ic_nextsong"
+             />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shadow"
+        android:gravity="center"
+        tools:context="com.zechen.freerun.Run" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="100dip" >
+
+            <Chronometer
+                android:id="@+id/chronometer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellstyle"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="@string/timer"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/pace"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cellstyle"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="@string/pace"
+                android:textSize="36sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip" >
+
+            <TextView
+                android:id="@+id/meters"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:background="@drawable/cellstyle"
+                android:gravity="center"
+                android:padding="25dp"
+                android:text="@string/distance"
+                android:textSize="36sp" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/StopRun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:contentDescription="@string/stop_run_button"
+            android:paddingRight="35dp"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:src="@drawable/ic_stop" />
+
+        <ImageButton
+            android:id="@+id/PauseRun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:contentDescription="@string/pause_run_button"
+            android:paddingLeft="35dp"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:src="@drawable/ic_pause" 
+            />
+    </LinearLayout>
+
+</LinearLayout>
